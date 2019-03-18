@@ -35,7 +35,7 @@ def create_app(test_config=None):
     def index():
         def list_of_assessments():
             query_url = "https://www.gov.uk/api/search.json?filter_content_store_document_type=" \
-                        "service_standard_report&order=-public_timestamp&count=1000"
+                        "service_standard_report&order=-public_timestamp&count=10"
             return requests.get(query_url).json()['results']
 
         def assessment_urls():
